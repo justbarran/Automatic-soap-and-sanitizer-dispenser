@@ -64,7 +64,7 @@ void loop() {
        myservo.write(135);
        delay(100);
        myservo.write(180); //Ajust how far you want the servo to go.
-       delay(500);
+       delay(1000);
        myservo.write(0);
        delay(3000);
     }                 // tell servo to go to position in variable 'pos'
