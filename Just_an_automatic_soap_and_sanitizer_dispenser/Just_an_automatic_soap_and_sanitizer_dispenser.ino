@@ -56,7 +56,7 @@ void loop() {
     Serial.print("Distance: ");
     Serial.println(distance);
     //Servo
-    if(distance<10){ Check distance is less than 10cm 
+    if(distance<10){ //Check distance is less than 10cm 
        myservo.write(45); 
        delay(100);
        myservo.write(90);
