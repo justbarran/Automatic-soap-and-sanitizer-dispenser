@@ -35,8 +35,8 @@ int pos = 0;    // variable to store the servo position
 void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object  
-  myservo.write(0);
+  myservo.attach(servo);  // attaches the servo on pin 9 to the servo object  
+  myservo.write(0);   // Sets Servo to initially 0 degrees 
   Serial.begin(9600); // Starts the serial communication
 }
 
@@ -57,7 +57,7 @@ void loop() {
     Serial.println(distance);
     //Servo
     if(distance<10){ //Check distance is less than 10cm 
-       myservo.write(45); 
+       myservo.write(45); // Sets Servo in stages from 0 to 180 degrees so soap does not pitch out. 
        delay(100);
        myservo.write(90);
        delay(100);
@@ -65,7 +65,7 @@ void loop() {
        delay(100);
        myservo.write(180); //Ajust how far you want the servo to go.
        delay(1000);
-       myservo.write(0);
-       delay(3000);
-    }                 // tell servo to go to position in variable 'pos'
+       myservo.write(0); // Reset the servo to 0 Degrees
+       delay(3000);   //Delay the next time someone can get soap
+    }                 /
 }
