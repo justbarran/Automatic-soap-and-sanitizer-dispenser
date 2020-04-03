@@ -67,5 +67,5 @@ void loop() {
        delay(1000);
        myservo.write(0); // Reset the servo to 0 Degrees
        delay(3000);   //Delay the next time someone can get soap
-    }                 /
+    }                 
 }
